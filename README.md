@@ -9,11 +9,11 @@ The Software Part, we decided to use Arduino 101 needs to realize, which way the
 and communicate this to the 3 Motors that controll the axes.
 
 # Codestructure
-
 the main Code is written in the following file:
   master/sketches/sketch_jan30a/sketch_jan30a.ino
-  https://github.com/SebastianFath/3-axis-Gimbal.Arduino/blob/master/sketches/sketch_jan30a/sketch_jan30a.ino
-side codes and to Develop are in either 
+  (https://github.com/SebastianFath/3-axis-Gimbal.Arduino/blob/master/sketches/sketch_jan30a/sketch_jan30a.ino)
+  
+side codes and WIP are in either 
   master/sketches or
   master/processing , depending on in wich language and on what plattform they are written/ executed.
 
