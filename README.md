@@ -17,3 +17,9 @@ side codes and WIP are in either
   master/sketches or
   master/processing , depending on in wich language and on what plattform they are written/ executed.
 
+  # NEWS and TODOs
+  since the code is currently only reading out the Data of the CurieIMU and in a non-Usable Format, It is still needed to convert the Data from CurieIMU into Degrees.
+  
+  The second sensor is also coming (Adafruit) and will need wiring and coding.
+  
+  The Question what exact model of Motors will be used is still TBA
