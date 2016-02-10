@@ -1,14 +1,4 @@
-#include <BLEAttribute.h>
-#include <BLECentral.h>
-#include <BLECharacteristic.h>
-#include <BLECommon.h>
-#include <BLEDescriptor.h>
-#include <BLEPeripheral.h>
-#include <BLEService.h>
-#include <BLETypedCharacteristic.h>
-#include <BLETypedCharacteristics.h>
-#include <BLEUuid.h>
-#include <CurieBle.h>
+
 
 #include <BMI160.h>
 #include <CurieImu.h>
@@ -97,7 +87,7 @@ void loop() {
   yaw = filterMadgwick.getYaw();
   roll = filterMadgwick.getRoll();
   pitch = filterMadgwick.getPitch();
-/*
+
   if (Serial.available() > 0) {
     int val = Serial.read();
     if (val == 's') { // if incoming serial is "s"
@@ -108,7 +98,8 @@ void loop() {
       Serial.println(roll);
     }
   }
-*/
+
+/*
   //Section for debugging only
 
   Serial.print(axC); Serial.print("\t");
@@ -118,6 +109,6 @@ void loop() {
   Serial.print(gyC); Serial.print("\t");
   Serial.print(gzC); Serial.print("\t");
   Serial.println("");
-
+*/
 
 }
