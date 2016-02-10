@@ -7,6 +7,8 @@
 
 (4) https://github.com/mjs513/FreeIMU-Updates
 
+(5) https://github.com/mjs513/FreeIMU-Updates/wiki/04.-FreeIMU-Calibration
+
 # Libraries
 (1) https://github.com/adafruit/Adafruit_L3GD20_U
 
