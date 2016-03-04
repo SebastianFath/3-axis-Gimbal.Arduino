@@ -97,11 +97,17 @@ void loop() {
   if (Serial.available() > 0) {
     int val = Serial.read();
     if (val == 's') { // if incoming serial is "s"
-      Serial.print(yaw & " , " & yaw*c;
-      Serial.print(","); // print comma so values can be parsed
+      Serial.print(yaw);
+      Serial.print(" , ");
+      Serial.print(yaw*c);
+      Serial.print(";"); // print comma so values can be parsed
       Serial.print(pitch);
-      Serial.print(","); // print comma so values can be parsed
-      Serial.println(roll);
+      Serial.print(" , ");
+      Serial.print(pitch*c);
+      Serial.print(";"); // print comma so values can be parsed
+      Serial.print(roll);
+      Serial.print(" , ");
+      Serial.println(roll*c)
     }
   }
     analogWrite(M1, yaw*c);
