@@ -10,6 +10,7 @@
 
 //Setup dor Madgwick, general vars
 Madgwick filterMadgwick;
+bool status = true;
 int axC, ayC, azC;
 int gxC, gyC, gzC;
 float yaw, pitch, roll;
@@ -109,10 +110,28 @@ void loop() {
       Serial.print(" , ");
       Serial.println(roll*c)
     }
+    else if (val == 'start') {
+      status = true;
+    }
+    else if (val == 'stop') {
+      status = false;
+    }
+    else if (val == 'status') {
+      Serial.println("Status");
+      Serial.print("running: ");
+      Serial.println(status);
+      Serial.print("calibration-factor: ");
+      Serial.println(factor);
+      Serial.print("coverting-factor: ");
+      Serial.println(c);
+    }
   }
+  if (status == true) {
     analogWrite(M1, yaw*c);
     analogWrite(M2, pitch*c);
     analogWrite(M3, roll*c);
+  }
+
 /*
   //Section for debugging only
 
