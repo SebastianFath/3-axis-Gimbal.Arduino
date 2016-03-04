@@ -16,8 +16,12 @@ float yaw, pitch, roll;
 int factor = 800; //Sensitivity of CurieIMU sensor
 
 int CalibrateOffsets = 1; //Calibration yes/no?
+int M1 = 3;
+int M2 = 5;
+int M3 = 6;
+int M4 = 9;
 
-
+int c = -1;  //factor for yaw, pitch, roll
 void setup() {
   // comm. Setup
   Serial.begin(9600);
@@ -68,7 +72,9 @@ void setup() {
     
     
   }
-  
+  pinMode(M1, OUTPUT);
+  pinMode(M2, OUTPUT);
+  pinMode(M3, OUTPUT);
 }
 
 void loop() {
@@ -91,14 +97,16 @@ void loop() {
   if (Serial.available() > 0) {
     int val = Serial.read();
     if (val == 's') { // if incoming serial is "s"
-      Serial.print(yaw);
+      Serial.print(yaw & " , " & yaw*c;
       Serial.print(","); // print comma so values can be parsed
       Serial.print(pitch);
       Serial.print(","); // print comma so values can be parsed
       Serial.println(roll);
     }
   }
-
+    analogWrite(M1, yaw*c);
+    analogWrite(M2, pitch*c);
+    analogWrite(M3, roll*c);
 /*
   //Section for debugging only
 
