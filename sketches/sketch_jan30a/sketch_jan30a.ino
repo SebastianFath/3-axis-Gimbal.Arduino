@@ -14,7 +14,7 @@ bool status = true;
 int axC, ayC, azC;
 int gxC, gyC, gzC;
 float yaw, pitch, roll;
-int factor = 800; //Sensitivity of CurieIMU sensor
+int factor = 800; //Sensitivity of CurieIMU s0ensor
 
 int CalibrateOffsets = 1; //Calibration yes/no?
 int M1 = 3;
@@ -122,7 +122,7 @@ void loop() {
       Serial.println(status);
       Serial.print("calibration-factor: ");
       Serial.println(factor);
-      Serial.print("coverting-factor: ");
+      Serial.print("converting-factor: ");
       Serial.println(c);
     }
   }
